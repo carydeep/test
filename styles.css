@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  --margin-px: 50px;
+  height: calc(100vh - 2 * var(--margin-px));
+  width: calc(80vw - 2 * var(--margin-px));
+  position: relative;
+  margin: var(--margin-px);
+}
+
+.main-content {
+  font-size: 50px;
+  max-width: 500px;
+}
+
+.sub-content {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-left: auto;
+  max-width: 400px;
+}
+
+.title {
+  color: rgb(47, 47, 255);
+  font-size: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+.list-content li {
+  margin-left: 16px;
+  margin-top: 20px;
+}
+
+.list-content li::before {
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+  display: inline-block;
+  width: 10px;
+  margin-left: -16px;
+}
+
+.list-circle {
+  list-style: none;
+}
+
+.circle {
+  background-image: linear-gradient(
+    to top right,
+    rgb(196, 39, 185),
+    rgb(199, 49, 44)
+  );
+  border: 5px solid rgb(199, 199, 199);
+  border-radius: 50%;
+  line-height: var(--box-width);
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  width: var(--box-width);
+  height: var(--box-width);
+}
+
+.circle1 {
+  --box-width: 170px;
+  top: 250px;
+  left: 40px;
+}
+
+.circle2 {
+  --box-width: 170px;
+  top: 400px;
+  left: 250px;
+}
+
+.circle3 {
+  --box-width: 200px;
+  top: 200px;
+  left: 400px;
+}
+
+.circle4 {
+  --box-width: 180px;
+  top: 20px;
+  left: 600px;
+}
+
+.circle5 {
+  --box-width: 150px;
+  top: 100px;
+  left: 900px;
+}
