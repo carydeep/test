@@ -1,62 +1,81 @@
-let mainContent = gsap.from(".main-content", {
-  duration: 1,
-  delay: 0,
+let tl = gsap.timeline({
+  defaults: { duration: 0.3 },
+  repeat: -1,
+  repeatDelay: 1,
+  yoyo: true,
+});
+
+let mainContent = tl.from(".main-content", {
   y: 200,
 });
 
-let circle1 = gsap.from(".circle1", {
-  duration: 1,
-  delay: 0.5,
-  x: 40,
-  y: 40,
-  scale: 0,
-});
+let circle1 = tl.from(
+  ".circle1",
+  {
+    x: 40,
+    y: 40,
+    scale: 0,
+  },
+  "<0.1"
+);
 
-let circle2 = gsap.from(".circle2", {
-  duration: 1,
-  delay: 0.6,
-  x: 40,
-  y: -10,
-  scale: 0,
-});
+let circle2 = tl.from(
+  ".circle2",
+  {
+    x: 40,
+    y: -10,
+    scale: 0,
+  },
+  "<0.1"
+);
 
-let circle3 = gsap.from(".circle3", {
-  duration: 1,
-  delay: 0.7,
-  x: 40,
-  y: -20,
-  scale: 0,
-});
+let circle3 = tl.from(
+  ".circle3",
+  {
+    x: 40,
+    y: -20,
+    scale: 0,
+  },
+  "<0.1"
+);
 
-let circle4 = gsap.from(".circle4", {
-  duration: 1,
-  delay: 0.8,
-  x: 40,
-  y: 30,
-  scale: 0,
-});
+let circle4 = tl.from(
+  ".circle4",
+  {
+    x: 40,
+    y: 30,
+    scale: 0,
+  },
+  "<0.1"
+);
 
-let circle5 = gsap.from(".circle5", {
-  duration: 1,
-  delay: 0.9,
-  x: 40,
-  y: 20,
-  scale: 0,
-});
+let circle5 = tl.from(
+  ".circle5",
+  {
+    x: 40,
+    y: 20,
+    scale: 0,
+  },
+  "<0.1"
+);
 
-let title = gsap.from(".title", {
-  duration: 1,
-  delay: 1.1,
-  y: 20,
-  opacity: 0,
-});
+let title = tl.from(
+  ".title",
+  {
+    y: 20,
+    opacity: 0,
+  },
+  "<0.1"
+);
 
 let content = document.querySelector(".list-content").children;
 for (let i = 0; i < content.length; i++) {
-  gsap.from(content[i], {
-    duration: 1,
-    delay: 1.1 + i * 0.2,
-    y: 20,
-    opacity: 0,
-  });
+  tl.from(
+    content[i],
+    {
+      y: 20,
+      opacity: 0,
+    },
+    "<0.1"
+  );
 }
